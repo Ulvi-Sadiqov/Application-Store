@@ -1,0 +1,595 @@
+*:hover {
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: white;
+  width: 100%;
+  margin: 0;
+  font-weight: 400;
+}
+
+body .w3-sidebar {
+  z-index: 100000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20%;
+  height: 100%;
+}
+
+body .w3-sidebar .ac {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .w3-sidebar .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .w3-sidebar .menu .hr {
+  background: #939393;
+  width: 100%;
+  height: 1px;
+}
+
+body .w3-sidebar .menu .list {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .w3-sidebar .menu .list a {
+  text-decoration: none;
+  color: black;
+}
+
+body .w3-sidebar .menu .list a:hover {
+  text-decoration: none;
+}
+
+body header {
+  z-index: 1;
+  display: inline-block;
+  margin-top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 95%;
+  height: 50px;
+}
+
+body header .navbar {
+  top: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  height: 100;
+}
+
+body header .navbar .navbar-nav {
+  margin-left: 40px;
+}
+
+body header .navbar .navbar-nav li {
+  padding: 0px 10px;
+}
+
+body header .navbar .navbar-nav li a {
+  color: black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body header .navbar .navbar-nav li a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+body .bottom-menu {
+  display: none;
+}
+
+body main {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+body main .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .main-content .main-img {
+  position: relative;
+}
+
+body main .main-content .main-img:hover .overflow {
+  display: block;
+}
+
+body main .main-content .main-img .overflow {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 44, 44, 0.5);
+}
+
+body main .main-content .main-img .overflow a {
+  text-decoration: none;
+  color: red;
+}
+
+body main .main-content .main-img .overflow h1 {
+  color: white;
+}
+
+body main .main-content .other-img .img {
+  position: relative;
+}
+
+body main .main-content .other-img .img:hover .overflow {
+  display: block;
+}
+
+body main .main-content .other-img .img .overflow {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 100px;
+  background-color: rgba(44, 44, 44, 0.5);
+}
+
+body main .main-content .other-img .img .overflow a {
+  text-decoration: none;
+  color: red;
+}
+
+body main .main-content .other-img .img .overflow h1 {
+  color: white;
+}
+
+body main .main-content .other-img .img2 {
+  position: relative;
+}
+
+body main .main-content .other-img .img2:hover .overflow {
+  display: block;
+}
+
+body main .main-content .other-img .img2 .overflow {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 100px;
+  background-color: rgba(44, 44, 44, 0.5);
+}
+
+body main .main-content .other-img .img2 .overflow a {
+  text-decoration: none;
+  color: red;
+}
+
+body main .main-content .other-img .img2 .overflow h1 {
+  color: white;
+}
+
+body main .programs {
+  margin-top: 120px;
+  margin-bottom: 10px;
+}
+
+body main .programs .apps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .programs .apps .app {
+  padding: 5px 20px;
+  margin: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .programs .apps .app img {
+  border-radius: 15px;
+}
+
+body main .programs .apps .app .about-text {
+  color: black;
+  text-align: center;
+}
+
+body main .games {
+  margin-bottom: 10px;
+}
+
+body main .games .apps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .games .apps .app {
+  background-color: white;
+  padding: 5px 10px;
+  margin: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .games .apps .app img {
+  border-radius: 15px;
+}
+
+body main .games .apps .app .about-text {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+body main .more-apps .apps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .more-apps .apps .app {
+  padding: 5px 10px;
+  margin: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .more-apps .apps .app img {
+  border-radius: 15px;
+}
+
+body main .more-apps .apps .app .about-text {
+  color: black;
+  text-align: center;
+}
+
+body main .status {
+  margin: 50px 0px;
+}
+
+body main .status .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body main .status .list .box img {
+  width: 180px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+body main .status .list .box .text h5 {
+  text-decoration: none;
+  color: black;
+}
+
+body main .status .list .box .text h5:hover {
+  text-decoration: none;
+}
+
+body main .status .list .box .text span {
+  color: #777777;
+  text-decoration: none;
+}
+
+body main .status .list .box .text span:hover {
+  text-decoration: none;
+}
+
+body main .slider {
+  margin-top: 50px;
+}
+
+body main .likes {
+  margin-top: 50px;
+  background-image: url(file:///C:/Users/Elvin/Desktop/App%20Store/images/pk%20xd.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 0px;
+}
+
+body main .likes .answer {
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+body main .likes .answer p {
+  font-size: 20px;
+}
+
+body main .likes .app {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main .likes .app img {
+  width: 70px;
+  border-radius: 10px;
+}
+
+body main .likes .like {
+  margin: 50px 0px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main .likes .like i {
+  font-size: 40px;
+  color: black;
+  margin: 0px 20px;
+}
+
+body main .likes .num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+
+body main .likes .num p {
+  font-size: 20px;
+  color: black;
+  margin: 0px 20px;
+}
+
+@media only screen and (max-width: 990px) {
+  body header {
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    top: 0;
+  }
+  body header .navbar .navbar-nav {
+    display: none;
+  }
+  body header .navbar form input {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  body main .main-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main .main-content img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body main .programs .apps .app {
+    margin: 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  body main .programs .apps {
+    overflow-x: scroll;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+  }
+  body main .games .apps {
+    overflow-x: scroll;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+  }
+  body main .more-apps .apps {
+    overflow-x: scroll;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+  }
+  body main .status .list {
+    overflow-x: scroll;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+  }
+  body main .status .list .box {
+    margin: 0px 10px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body .slider img {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body .slider img {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body .bottom-menu {
+    bottom: 0;
+    top: 91%;
+    margin-bottom: 0;
+    position: fixed;
+    left: 0;
+    display: block;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    height: 80px;
+    background-color: white;
+    z-index: 1000;
+  }
+  body .bottom-menu .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body .bottom-menu a {
+    margin-top: 8px;
+    font-size: 20px;
+    color: black;
+  }
+  body .bottom-menu a:hover {
+    text-decoration: none;
+  }
+  body .w3-sidebar {
+    width: 60%;
+  }
+  body main .likes p {
+    font-size: 16px;
+  }
+  body main .likes .app {
+    margin-top: 5px;
+  }
+  body main .likes .like {
+    margin: 25px 0px;
+  }
+  body main .likes .like i {
+    font-size: 30px;
+  }
+  body main .likes .num p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body .w3-sidebar {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

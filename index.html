@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Store - Install Apps and Games</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/9bc3dcb3e0.js" crossorigin="anonymous"></script>
+  <style>
+    *:hover {
+      text-decoration: none;
+    }
+  </style>
+
+</head>
+
+<body style="margin: 0;">
+  <audio controls autoplay loop  style="display:none;" id="saudio">
+    <source src="Audio/Brawl Stars - Intro 2020 June.mp4"  type="audio/mp4">
+  </audio>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <h3 onclick="w3_open()" style="cursor: pointer;margin-left: 20px;">☰</h3>
+
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="link" href="#">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="link" href="account.html">My Account</a>
+        </li>
+        <li class="nav-item active">
+          <a class="link" href="dom.html">Sign out</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Install
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Application</a>
+            <a class="dropdown-item" href="game.html">Games</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Picture</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="link " href="#" tabindex="-1" onclick="Settings()" aria-disabled="true">Settings</a>
+        </li>
+        <li class="nav-item active">
+          <a class="link " href="#" tabindex="-1"  onclick="AudioManager()" aria-disabled="true">Music On</a>
+        </li>
+      </ul>
+      <form class="form-inline " style="margin-right: 20px;">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      </form>
+    </nav>
+  </header>
+
+
+  <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:3"
+    id="mySidebar">
+    <div class="ac" style="padding:20px 0px;display:flex;align-items:center;background-color: aqua;">
+      <img
+        src="https://lh3.googleusercontent.com/a-/AOh14Ghhe8ocPegfeb6voojcmTcoESJ1M6BBQGB62bXf=s88-c-k-c0x00ffffff-no-rj-mo"
+        width="50px" alt="" style="border-radius: 100px;">
+      <span style="font-size:15px ;" id="name"></span>
+    </div>
+    <div class="menu">
+
+      <div class="list">
+        <div class="icon">
+          <i class="fas fa-times" style="font-size:20px ;"></i>
+        </div>
+        <div class="text">
+          <h5 onclick="w3_close()" style="cursor: pointer;">Close Menu</h5>
+        </div>
+      </div>
+      <div class="hr">
+
+      </div>
+      <div class="list">
+        <div class="icon">
+          <a href=""><i class="fas fa-home" style="font-size: 20px;"></i></a>
+        </div>
+        <div class="text">
+          <a href="#">
+            <h5 onclick="w3_close()">Home</h5>
+          </a>
+        </div>
+      </div>
+      <div class="list">
+        <div class="icon">
+          <a href=""><i class="fas fa-download" style="font-size: 20px;"></i></a>
+        </div>
+        <div class="text">
+          <a href="">
+            <h5>Download</h5>
+          </a>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="icon">
+          <a href=""><i class="fas fa-sd-card"></i></a>
+        </div>
+        <div class="text">
+          <a href="">
+            <h5>Memory</h5>
+          </a>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="icon">
+          <a href=""><i class="fas fa-cog" style="font-size: 20px"></i></a>
+        </div>
+        <div class="text">
+          <a href="">
+            <h5>Settings</h5>
+          </a>
+        </div>
+      </div>
+
+      <div class="hr">
+
+      </div>
+      <div class="hr">
+
+      </div>
+
+      <div class="list">
+        <div class="icon">
+          <a href=""><i class="fas fa-th-large"></i></a>
+        </div>
+        <div class="text">
+          <a href="">
+            <h5>Apps</h5>
+          </a>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="icon">
+          <a href=""><i class="fas fa-dice-five"></i></a>
+        </div>
+        <div class="text">
+          <a href="game.html" target="_blank">
+            <h5>Games</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    </ul>
+  </nav>
+  <div class="w3-overlay w3-hide-large " onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+
+
+
+  <section class="bottom-menu">
+    <div class="icon">
+      <a href=""><i class="fas fa-home" style="color: blue;"></i></a>
+      <a href="game.html"><i class="fas fa-dice-five"></i></a>
+      <a href=""><i class="fas fa-th-large"></i></a>
+    </div>
+
+  </section>
+
+  <main>
+    <section class="main-content">
+      <div class="main-img">
+        <img src="images/pk xd.jpg" alt="" width="750px" height="500vh">
+        <div class="overflow">
+          <h1>PK XD</h1>
+          <a href="" onclick="Download()">Install </a>
+        </div>
+      </div>
+      <div class="other-img">
+        <div class="img2">
+          <img src="https://www.minecraft.net/content/dam/games/minecraft/marketplace/mediablock-buzzybees.jpg" alt=""
+            class="img" width="100%" height="250px">
+          <div class="overflow">
+            <h1>Minecraft</h1>
+            <a href="" onclick="Download()" id="btn-audio">7.99$</a>
+            <audio src="audio/Now Loading (City) - Brawl Stars Soundtrack.mp4" id="audio" style="display:none;"></audio>
+          </div>
+        </div>
+        <div class="img">
+          <img src="file:///C:/Users/Elvin/Desktop/App%20Store/images/talkings.jpg" class="img" alt="" width="100%"
+            height="250px">
+          <div class="overflow">
+            <h1>Tom Friend</h1>
+            <a href="" onclick="Download()">Install</a>
+          </div>
+        </div>
+
+
+    </section>
+
+
+
+    <section class="programs">
+      <h4 style="margin-left: 20px;">Famous Application:</h4>
+      <div class="apps" id="apps">
+        <div class="app">
+          <a href="facebook.html">
+            <div class="logo">
+              <img width="70px" src="images/facebook.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Facebook</span> <br>
+              <span style="color: #777777;">42mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+
+        <div class="app">
+          <a href="snapchat.html">
+            <div class="logo">
+              <img width="70px" src="images/snapchat.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Snapchat</span> <br>
+              <span style="color: #777777;">60mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="pinterest.html">
+            <div class="logo">
+              <img width="70px" src="images/pinterest.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Pinterest</span> <br>
+              <span style="color: #777777;">18mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="youtube.html">
+            <div class="logo">
+              <img width="70px" src="images/youtube.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Youtube</span> <br>
+              <span style="color: #777777;">455mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/neftlix.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Neftlix</span> <br>
+              <span style="color: #777777;">20mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/tik tok.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Tik Tok</span> <br>
+              <span style="color: #777777;">39mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/chrome.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Chrome</span> <br>
+              <span style="color: #777777;">78mb</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="games">
+      <h4 style="margin-left: 20px;">
+        Games:
+      </h4>
+
+      <div class="apps" id="games">
+        <a href="">
+          <div class="app">
+            <div class="logo">
+              <img width="70px"
+                src="https://lh3.googleusercontent.com/bxctkJvIZ3irnUhqC2MQapo5y2K_H0Vc1aEmx6O8hVFjIk5b9P8KYTEmHBjgMGyvfaOS"
+                alt="">
+            </div>
+            <div class="about-text">
+              <span>PK XD</span> <br>
+              <span style="color: #777777;">110mb</span>
+            </div>
+        </a>
+
+      </div>
+
+
+
+
+      <div class="app">
+        <a href="">
+          <div class="logo">
+            <img width="70px" src="images/minecraft icon.jpg" alt="">
+          </div>
+          <div class="about-text">
+            <span>Minecraft</span> <br>
+            <span style="color: #777777;">59mb</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="app">
+        <a href="">
+          <div class="logo">
+            <img width="70px" src="images/car icon.png" alt="">
+          </div>
+          <div class="about-text">
+            <span>Extreme</span> <br>
+            <span style="color: #777777;">15mb</span>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="app">
+        <a href="">
+          <div class="logo">
+            <img width="70px" src="images/bubbu icon.jpg" alt="">
+          </div>
+          <div class="about-text">
+            <span>Bubbu</span> <br>
+            <span style="color: #777777;">43mb</span>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="app">
+        <a href="">
+          <div class="logo">
+            <img width="70px" src="images/duddu icon.png" alt="">
+          </div>
+          <div class="about-text">
+            <span>Duddu</span> <br>
+            <span style="color: #777777;">89mb</span>
+          </div>
+        </a>
+      </div>
+
+
+
+
+
+      <div class="app">
+        <a href="">
+          <div class="logo">
+            <img width="70px" src="images/craft icon.png" alt="">
+          </div>
+          <div class="about-text">
+            <span>Craft</span> <br>
+            <span style="color: #777777;">102mb</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="app">
+        <a href="">
+          <div class="logo">
+            <img width="70px" src="images/firestars.png" alt="">
+          </div>
+          <div class="about-text">
+            <span>War </span> <br>
+            <span style="color: #777777;">1,7gb</span>
+          </div>
+        </a>
+      </div>
+      </div>
+    </section>
+
+    <section class="status">
+      <div class="list">
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/game.png" alt="">
+            </div>
+            <div class="text">
+              <h5>Pk Xd</h5>
+              <span>Adventure!!!</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/minecraft.png" alt="">
+            </div>
+            <div class="text">
+              <h5>Minecraft</h5>
+              <span>Adventure!!!</span>
+            </div>
+          </a>
+
+        </div>
+
+
+
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/roblox.jpg" alt="">
+            </div>
+            <div class="text">
+              <h5>Roblox</h5>
+              <span>Adventure!!!</span>
+            </div>
+          </a>
+
+        </div>
+
+
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/candy crush.png" alt="">
+            </div>
+            <div class="text">
+              <h5>Candy Crush</h5>
+              <span>sweet!</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/extreme.jpg" alt="">
+            </div>
+            <div class="text">
+              <h5>Extreme Car</h5>
+              <span>driving!</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="file:///C:/Users/Elvin/Desktop/Fire%20Stars/images/battle.png" alt="">
+            </div>
+            <div class="text">
+              <h5>Fire Stars</h5>
+              <span>battle!</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">More Apps:</h4>
+      <div class="apps">
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/translate logo.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Translate</span> <br>
+              <span style="color: #777777;">32mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/Skype logog.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Skype</span> <br>
+              <span style="color: #777777;">65mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/visual studio code.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Visual<sup>Code</sup></span> <br>
+              <span style="color: #777777;">677mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/visual studio.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Visual</span> <br>
+              <span style="color: #777777;">899mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/word.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Word</span> <br>
+              <span style="color: #777777;">23mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/powerpoint.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Powerpoint</span> <br>
+              <span style="color: #777777;">25mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/excel.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Excel</span> <br>
+              <span style="color: #777777;">22mb</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        New Version:
+      </h4>
+      <div class="apps">
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/visual insiders.png" alt="" style="border-radius: 10px;">
+            </div>
+            <div class="about-text">
+              <span>Visual I</span> <br>
+              <span style="color: #777777;">689mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/zoom.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Zoom</span> <br>
+              <span style="color: #777777;">62mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/teams.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Teams</span> <br>
+              <span style="color: #777777;">52mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/candy.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>CandyCrush</span> <br>
+              <span style="color: #777777;">15mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/scary.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Scary T</span> <br>
+              <span style="color: #777777;">28mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/avast.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Avast</span> <br>
+              <span style="color: #777777;">29mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/instagram.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Instagram</span> <br>
+              <span style="color: #777777;">98mb</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        Mobile:
+      </h4>
+      <div class="apps">
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/photoshop.png" alt="" style="border-radius: 10px;">
+            </div>
+            <div class="about-text">
+              <span>Photoshop</span> <br>
+              <span style="color: #777777;">47mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/dreamweawer.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Weaver</span> <br>
+              <span style="color: #777777;">68mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/sway.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Sway</span> <br>
+              <span style="color: #777777;">54mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/tinkercad.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Tinkercad</span> <br>
+              <span style="color: #777777;">80mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/opera.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Opera</span> <br>
+              <span style="color: #777777;">29mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/uber.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Uber</span> <br>
+              <span style="color: #777777;">18mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/whatsapp.webp" alt="">
+            </div>
+            <div class="about-text">
+              <span>Whatsapp</span> <br>
+              <span style="color: #777777;">56mb</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="status">
+      <div class="list">
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/craft.jpg" alt="">
+            </div>
+            <div class="text">
+              <h5>Craft</h5>
+              <span>Adventure!!!</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/talkings.jpg" alt="">
+            </div>
+            <div class="text">
+              <h5>Talking Tom</h5>
+              <span>Animal!!!</span>
+            </div>
+          </a>
+
+        </div>
+
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/duddu new.jpg" alt="">
+            </div>
+            <div class="text">
+              <h5>Duddu</h5>
+              <span>Pet!</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/pubg new.jpg" alt="">
+            </div>
+            <div class="text">
+              <h5>Pubg Mobile</h5>
+              <span>Battle!!!</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/teacher.jpg" alt="">
+            </div>
+            <div class="text">
+              <h5>Scary Teacher</h5>
+              <span>Afraid!!!</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/bubbu.png" alt="">
+            </div>
+            <div class="text">
+              <h5>Bubbu</h5>
+              <span>Animal!!</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        Recommended:
+      </h4>
+      <div class="apps">
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/snaptube.jpg" alt="" style="border-radius: 10px;">
+            </div>
+            <div class="about-text">
+              <span>Snaptube</span> <br>
+              <span style="color: #777777;">49mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px"
+                src="data:image/jpeg;base64,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"
+                alt="">
+            </div>
+            <div class="about-text">
+              <span>Pubg</span> <br>
+              <span style="color: #777777;">1.6gb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/go.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>YoutubeG</span> <br>
+              <span style="color: #777777;">54mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/onenote.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>OneNote</span> <br>
+              <span style="color: #777777;">82mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/yandex.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Yandex</span> <br>
+              <span style="color: #777777;">65mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/draw.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Draw.io</span> <br>
+              <span style="color: #777777;">18mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/paint.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Paint</span> <br>
+              <span style="color: #777777;">43mb</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        More:
+      </h4>
+      <div class="apps">
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/youtube studio.png" alt="" style="border-radius: 10px;">
+            </div>
+            <div class="about-text">
+              <span>Youtube</span> <br>
+              <span style="color: #777777;">58mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/publisher.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Publisher</span> <br>
+              <span style="color: #777777;">62mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/pin lite.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Pinterest<sup>lt</sup></span> <br>
+              <span style="color: #777777;">51mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/lite.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Facebook</span> <br>
+              <span style="color: #777777;">95mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/xbox.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Xbox</span> <br>
+              <span style="color: #777777;">156mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px"
+                src="data:image/jpeg;base64,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"
+                alt="">
+            </div>
+            <div class="about-text">
+              <span>Free Fire</span> <br>
+              <span style="color: #777777;">548mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/wish.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Wish</span> <br>
+              <span style="color: #777777;">145mb</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        More Games:
+      </h4>
+      <div class="apps">
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSMtwbOWEYLQnZ2osLsJSHFgGC9e2pJfgKTkw&usqp=CAU"
+                alt="" style="border-radius: 10px;">
+            </div>
+            <div class="about-text">
+              <span>CallOfDuty</span> <br>
+              <span style="color: #777777;">1,4gb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/tom2.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Tom</span> <br>
+              <span style="color: #777777;">88mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/block craft.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Block<sup>Craft</sup></span> <br>
+              <span style="color: #777777;">53mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/zooba.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Zooba </span> <br>
+              <span style="color: #777777;">94mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/Brawk.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Brawl S</span> <br>
+              <span style="color: #777777;">156mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/tom hero.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>TomHero</span> <br>
+              <span style="color: #777777;">68mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/homescapes.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>HomeScapes</span> <br>
+              <span style="color: #777777;">145mb</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="status">
+      <div class="list">
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/word design.png" alt="">
+            </div>
+            <div class="text">
+              <h5>Word</h5>
+              <span>Creat Text!!!</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/zoom.png" alt="">
+            </div>
+            <div class="text">
+              <h5>Zoom-Meeting</h5>
+              <span>Virtual!!!</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/youtube new.jpg" alt="">
+            </div>
+            <div class="text">
+              <h5>Youtube</h5>
+              <span>Video!!!</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/skype.png" alt="">
+            </div>
+            <div class="text">
+              <h5>Skype</h5>
+              <span>Call!</span>
+            </div>
+          </a>
+
+        </div>
+
+
+
+
+        <div class="box">
+          <a href="">
+            <div class="img">
+              <img src="images/xbox nw.png" alt="">
+            </div>
+            <div class="text">
+              <h5>Xbox</h5>
+              <span>Games World!!</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        More Application:
+      </h4>
+      <div class="apps">
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/kids.png" alt="" style="border-radius: 10px;">
+            </div>
+            <div class="about-text">
+              <span>YoutubeK</span> <br>
+              <span style="color: #777777;">96mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/wolt.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Wolt</span> <br>
+              <span style="color: #777777;">82mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/ok.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Ok</span> <br>
+              <span style="color: #777777;">59mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/lt.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>LightRoom</span> <br>
+              <span style="color: #777777;">51mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/dualingo.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Dualingo</span> <br>
+              <span style="color: #777777;">189mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/inshot.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>InShot </span> <br>
+              <span style="color: #777777;">188mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/pc.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>PicsArt</span> <br>
+              <span style="color: #777777;">155mb</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        Favorite:
+      </h4>
+      <div class="apps">
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/ablo.png" alt="" style="border-radius: 10px;">
+            </div>
+            <div class="about-text">
+              <span>Ablo</span> <br>
+              <span style="color: #777777;">31mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/cut.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>YouCut</span> <br>
+              <span style="color: #777777;">22mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/scan.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>AdobeScan</span> <br>
+              <span style="color: #777777;">28mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/adobe.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>AdobeAcrobat</span> <br>
+              <span style="color: #777777;">45mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/canva.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Canva</span> <br>
+              <span style="color: #777777;">25mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/getcontact.webp" alt="">
+            </div>
+            <div class="about-text">
+              <span>Getcontact</span> <br>
+              <span style="color: #777777;">14mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/likee.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Likee</span> <br>
+              <span style="color: #777777;">52mb</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        Favorite Games:
+      </h4>
+      <div class="apps">
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/roblox new.webp" alt="" style="border-radius: 10px;">
+            </div>
+            <div class="about-text">
+              <span>Roblox</span> <br>
+              <span style="color: #777777;">88mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/gardenscapes.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Gardenscapes</span> <br>
+              <span style="color: #777777;">137mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/tom2.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Tom2</span> <br>
+              <span style="color: #777777;">101mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/fun race.png" alt="">
+            </div>
+            <div class="about-text">
+              <span>Fun Race</span> <br>
+              <span style="color: #777777;">47mb</span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/tom3.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Gold Run</span> <br>
+              <span style="color: #777777;">86mb</span>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px" src="images/ginger.jpg" alt="">
+            </div>
+            <div class="about-text">
+              <span>Ginger</span> <br>
+              <span style="color: #777777;">46mb</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="app">
+          <a href="">
+            <div class="logo">
+              <img width="70px"
+                src="https://lh3.googleusercontent.com/hdoAZSg01No2pfqgyh1b6uXC0gcqCwh55Jtl7KrJjiTREcOdr-BYYXQ0tcIQOAgl9Xo"
+                alt="">
+            </div>
+            <div class="about-text">
+              <span>TOMfriend</span> <br>
+              <span style="color: #777777;">67mb</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="slider">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active w-95">
+            <img src="images/pk xd1.jpg" class="d-block w-100" alt="..." height="500px">
+          </div>
+          <div class="carousel-item w-95">
+            <img src="images/pk xd 2.jpg" class="d-block w-100" alt="..." height="500px">
+          </div>
+          <div class="carousel-item w-95">
+            <img src="images/pk xd3.jpg" class="d-block w-100" alt="..." height="500px">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>function AudioManager(){document.getElementById("saudio").play();}</script>
+  <script>let object = JSON.parse(localStorage["people"]); document.getElementById("name").innerText = object.name + " " + object.surname </script>
+  <script>  function w3_open() { document.getElementById("mySidebar").style.display = "block"; document.getElementById("myOverlay").style.display = "block"; } function w3_close() { document.getElementById("mySidebar").style.display = "none"; document.getElementById("myOverlay").style.display = "none"; }</script>
+  <script>  function Settings() { let windows = window.open("setting.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=400,width=500,height=400"); myWindow.document.write(); }</script>
+  <script>document.getElementById("btn-audio").addEventListener("click", function (e) {
+      e.preventDefault();
+      let audio = document.getElementById("audio");
+      audio.play();
+    })</script>
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

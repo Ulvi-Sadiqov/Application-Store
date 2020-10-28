@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store - Games</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/9bc3dcb3e0.js" crossorigin="anonymous"></script>
+   <style>
+     *:hover{
+      text-decoration: none;
+     }
+     main{
+       margin-top: 100px;
+       top: 50px;
+     }
+   </style>
+</head>
+<body>
+ <audio src="audio/Brawl Stars - Intro 2020 June.mp4" loop id="saudio" style="display: none;"></audio>
+
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:3" id="mySidebar">
+        <div class="ac" style="padding:20px 0px;display:flex;align-items:center;background-color: aqua;">
+           <img src="https://lh3.googleusercontent.com/a-/AOh14Ghhe8ocPegfeb6voojcmTcoESJ1M6BBQGB62bXf=s88-c-k-c0x00ffffff-no-rj-mo"  width="50px" alt="" style="border-radius: 100px;">
+           <span style="font-size:15px ;">Ulvi Sadigov</span>
+        </div>
+         <div class="menu">
+    
+          <div class="list">
+            <div class="icon">
+              <i class="fas fa-times" style="font-size:20px ;"></i>
+            </div>
+            <div class="text">
+                  <h5 onclick="w3_close()" style="cursor: pointer;">Close Menu</h5>
+            </div>
+          </div>
+          <div class="hr">
+    
+          </div>
+             <div class="list">
+               <div class="icon">
+                <i class="fas fa-home" style="font-size: 20px;"></i>
+               </div>
+               <div class="text">
+                    <a href="index.html"><h5 onclick="w3_close()">Home</h5></a>
+               </div>
+             </div>
+             <div class="list">
+              <div class="icon">
+                <i class="fas fa-download" style="font-size: 20px;"></i>
+              </div>
+              <div class="text">
+                   <a href=""><h5>Download</h5></a>
+              </div>
+            </div>
+    
+            <div class="list">
+              <div class="icon">
+                <i class="fas fa-memory" style="font-size: 20px;"></i>
+              </div>
+              <div class="text">
+                   <a href=""><h5>Memory</h5></a>
+              </div>
+            </div>
+    
+            <div class="list">
+              <div class="icon">
+                <i class="fas fa-cog"  style="font-size: 20px"></i>
+              </div>
+              <div class="text">
+                 <a href=""> <h5>Settings</h5></a> 
+              </div>
+            </div>
+    
+            <div class="hr">
+    
+            </div>
+            <div class="hr">
+
+            </div>
+            
+        <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-th-large"></i></a>
+          </div>
+          <div class="text">
+             <a href=""> <h5>Apps</h5></a> 
+          </div>
+        </div>
+
+        <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-dice-five"></i></a>
+          </div>
+          <div class="text">
+             <a href="game.html"> <h5>Games</h5></a> 
+          </div>
+        </div>
+         </div>
+        </ul>
+      </nav>
+
+      <div class="w3-overlay w3-hide-large " onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    
+       <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <h3 onclick="w3_open()" style="cursor: pointer;margin-left: 20px;">☰</h3>
+        
+        
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="link" href="index.html" target="_blank">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="link" href="dom.html" >Sign out</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Install
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Application</a>
+                  <a class="dropdown-item" href="#">Games</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Picture</a>
+                </div>
+              </li>
+              <li class="nav-item active">
+                <a class="link " href="#" tabindex="-1" onclick="Settings()" aria-disabled="true">Settings</a>
+              </li>
+              <li class="nav-item active">
+                <a class="link " href="#" tabindex="-1" onclick="audioManager()" aria-disabled="true">Music On</a>
+              </li>
+            </ul>
+            <form class="form-inline " style="margin-right: 10px;">
+              <input class="form-control mr-sm-2" type="search"  placeholder="Search">
+            </form>
+        </nav>
+       </header>
+    
+    
+       <section class="bottom-menu" >
+         <div class="icon">
+          <a href="index.html"><i class="fas fa-home" ></i></a>
+          <a href="#"><i class="fas fa-dice-five" style="color: blue;"></i></a>
+          <a href=""><i class="fas fa-th-large"></i></a>
+         </div>
+    
+       </section>
+
+       <main>
+        <section class="games">
+            <h4 style="margin-left: 20px;">
+               Games:
+            </h4>
+
+            <div class="apps" id="games">
+              <a href="">
+               <div class="app">
+                 <div class="logo">
+                   <img width="70px" src="images/pk xd icon.jpg" alt="">
+                 </div>
+                <div class="about-text">
+                      <span>PK XD</span> <br>
+                      <span style="color: #777777;">110mb</span>
+                </div>
+              </a>
+          
+             </div>
+   
+   
+   
+   
+             <div class="app">
+              <a href="">
+               <div class="logo">
+                 <img width="70px" src="images/minecraft icon.jpg" alt="">
+               </div>
+              <div class="about-text">
+                    <span>Minecraft</span> <br>
+                    <span style="color: #777777;">59mb</span>
+              </div>
+              </a>
+            </div>
+   
+            <div class="app">
+                <a href="">
+                 <div class="logo">
+                   <img width="70px" src="images/car icon.png" alt="">
+                 </div>
+                <div class="about-text">
+                      <span>Extreme</span> <br>
+                      <span style="color: #777777;">15mb</span>
+                </div>
+                </a>
+          </div>
+   
+   
+          <div class="app">
+           <a href="">
+             <div class="logo">
+               <img width="70px" src="images/bubbu icon.jpg" alt="">
+             </div>
+            <div class="about-text">
+                  <span>Bubbu</span> <br>
+                  <span style="color: #777777;">43mb</span>
+            </div>
+           </a>
+        </div>
+   
+   
+        <div class="app">
+         <a href="">
+           <div class="logo">
+             <img width="70px" src="images/duddu icon.png" alt="">
+           </div>
+          <div class="about-text">
+                <span>Duddu</span> <br>
+                <span style="color: #777777;">89mb</span>
+          </div>
+         </a>
+      </div>
+   
+   
+   
+
+   
+    <div class="app">
+    <a href="">
+     <div class="logo">
+       <img width="70px" src="images/craft icon.png" alt="">
+     </div>
+    <div class="about-text">
+          <span>Craft</span> <br>
+          <span style="color: #777777;">102mb</span>
+    </div>
+    </a>
+   </div>
+   
+   <div class="app">
+   <a href="">
+     <div class="logo">
+       <img width="70px" src="images/war icon.jpg" alt="">
+     </div>
+    <div class="about-text">
+          <span>War </span> <br>
+          <span style="color: #777777;">560mb</span>
+    </div>
+   </a>
+   </div>
+           </div>
+        </section>
+
+       <section class="status">
+        <div class="list">
+          <div class="box">
+            <a href="">
+              <div class="img">
+                <img src="images/game.png" alt="">
+            </div>
+            <div class="text">
+                <h5>Pk Xd</h5>
+                <span>Adventure!!!</span>
+            </div>
+            </a>
+          </div>
+
+          <div class="box">
+            <a href="">   <div class="img">
+              <img src="images/minecraft.png" alt="">
+        </div>
+        <div class="text">
+            <h5>Minecraft</h5>
+            <span>Adventure!!!</span>
+        </div></a>
+         
+          </div>
+
+
+      
+
+          <div class="box">
+            <a href="">   <div class="img">
+              <img src="images/roblox.jpg" alt="">
+        </div>
+        <div class="text">
+            <h5>Roblox</h5>
+            <span>Adventure!!!</span>
+        </div></a>
+         
+          </div>
+
+
+
+          <div class="box">
+            <a href=""><div class="img">
+              <img src="images/candy crush.png" alt="">
+          </div>
+          <div class="text">
+             <h5>Candy Crush</h5>
+             <span>sweet!</span>
+          </div></a>
+            
+          </div>
+
+          <div class="box">
+               <a href="">
+                <div class="img">
+                  <img src="images/extreme.jpg" alt="">
+              </div>
+              <div class="text">
+                <h5>Extreme Car</h5>
+                <span>driving!</span>
+              </div>
+               </a>
+          </div>
+
+          <div class="box">
+            <a href="">
+              <div class="img">
+                <img src="images/robot.jpg" alt="">
+             </div>
+             <div class="text">
+                 <h5>War Robot</h5>
+                 <span>battle!</span>
+             </div>
+            </a>
+          </div>
+        </div>
+       </section>
+
+       <section class="more-apps">
+        <h4 style="margin-left: 20px;">
+          Favorite Games:
+        </h4>
+       <div class="apps">
+         <div class="app">
+           <a href="">
+             <div class="logo">
+               <img width="70px" src="images/roblox new.webp" alt="" style="border-radius: 10px;">
+             </div>
+            <div class="about-text">
+                  <span>Roblox</span> <br>
+                  <span style="color: #777777;">88mb</span>
+            </div>
+           </a>
+         </div>
+  
+  
+  
+  
+         <div class="app">
+          <a href="">
+           <div class="logo">
+             <img width="70px" src="images/gardenscapes.png" alt="">
+           </div>
+          <div class="about-text">
+                <span>Gardenscapes</span> <br>
+                <span style="color: #777777;">137mb</span>
+          </div>
+          </a>
+        </div>
+  
+        <div class="app">
+       <a href="">
+         <div class="logo">
+           <img width="70px" src="images/tom2.png" alt="">
+         </div>
+        <div class="about-text">
+              <span>Tom2</span> <br>
+              <span style="color: #777777;">101mb</span>
+        </div>
+       </a>
+      </div>
+  
+  
+      <div class="app">
+       <a href="">
+         <div class="logo">
+           <img width="70px" src="images/fun race.png" alt="">
+         </div>
+        <div class="about-text">
+              <span>Fun Race 3d</span> <br>
+              <span style="color: #777777;">47mb</span>
+        </div>
+       </a>
+    </div>
+  
+  
+    <div class="app">
+    <a href="">
+     <div class="logo">
+       <img width="70px" src="images/tom3.jpg" alt="">
+     </div>
+    <div class="about-text">
+          <span>Gold Run</span> <br>
+          <span style="color: #777777;">86mb</span>
+    </div>
+    </a>
+  </div>
+  
+  
+  
+  
+  
+  <div class="app">
+   <a href="">
+     <div class="logo">
+       <img width="70px" src="images/ginger.jpg" alt="">
+     </div>
+     <div class="about-text">
+          <span>Ginger</span> <br>
+          <span style="color: #777777;">46mb</span>
+     </div>
+   </a>
+  </div>
+  
+  <div class="app">
+  <a href="">
+   <div class="logo">
+     <img width="70px" src="images/multiplayer.png" alt="">
+   </div>
+   <div class="about-text">
+        <span>Multiplayer Car</span> <br>
+        <span style="color: #777777;">67mb</span>
+   </div>
+  </a>
+  </div>
+       </div>
+       </section>
+
+
+       <section class="status">
+        <div class="list">
+          <div class="box">
+            <a href="">
+              <div class="img">
+                <img src="images/craft.jpg" alt="">
+            </div>
+            <div class="text">
+                <h5>Craft</h5>
+                <span>Adventure!!!</span>
+            </div>
+            </a>
+          </div>
+  
+          <div class="box">
+            <a href="">   <div class="img">
+              <img src="images/talkings.jpg" alt="">
+        </div>
+        <div class="text">
+            <h5>Talking Tom</h5>
+            <span>Animal!!!</span>
+        </div></a>
+         
+          </div>
+  
+  
+          <div class="box">
+            <a href=""><div class="img">
+              <img src="images/duddu new.jpg" alt="">
+          </div>
+          <div class="text">
+             <h5>Duddu</h5>
+             <span>Pet!</span>
+          </div></a>
+            
+          </div>
+  
+          <div class="box">
+            <a href="">   <div class="img">
+              <img src="images/forza horizon.jpg" alt="">
+        </div>
+        <div class="text">
+            <h5>Forza Horizon 4</h5>
+            <span>Racing!!!</span>
+        </div></a>
+         
+          </div>
+  
+          <div class="box">
+               <a href="">
+                <div class="img">
+                  <img src="images/teacher.jpg" alt="">
+              </div>
+              <div class="text">
+                <h5>Scary Teacher</h5>
+                <span>Afraid!!!</span>
+              </div>
+               </a>
+          </div>
+  
+          <div class="box">
+            <a href="">
+              <div class="img">
+                <img src="images/bubbu.png" alt="">
+             </div>
+             <div class="text">
+                 <h5>Bubbu</h5>
+                 <span>Animal!!</span>
+             </div>
+            </a>
+          </div>
+        </div>
+       </section>
+
+
+       <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        New Update Games:
+      </h4>
+     <div class="apps">
+       <div class="app">
+         <a href="">
+           <div class="logo">
+             <img width="70px" src="images/candy.png" alt="" style="border-radius: 10px;">
+           </div>
+          <div class="about-text">
+                <span>Candy Crush</span> <br>
+                <span style="color: #777777;">23mb</span>
+          </div>
+         </a>
+       </div>
+
+
+
+
+       <div class="app">
+        <a href="">
+         <div class="logo">
+           <img width="70px" src="images/mini.webp" alt="">
+         </div>
+        <div class="about-text">
+              <span>Mini Block</span> <br>
+              <span style="color: #777777;">25mb</span>
+        </div>
+        </a>
+      </div>
+
+      <div class="app">
+     <a href="">
+       <div class="logo">
+         <img width="70px" src="images/block craft.png" alt="">
+       </div>
+      <div class="about-text">
+            <span>Block Craft</span> <br>
+            <span style="color: #777777;">87mb</span>
+      </div>
+     </a>
+    </div>
+
+
+    <div class="app">
+     <a href="">
+       <div class="logo">
+         <img width="70px" src="images/run icon.jpg" alt="">
+       </div>
+      <div class="about-text">
+            <span>Run Race 3d</span> <br>
+            <span style="color: #777777;">98mb</span>
+      </div>
+     </a>
+  </div>
+
+
+  <div class="app">
+  <a href="">
+   <div class="logo">
+     <img width="70px" src="images/cars.png" alt="">
+   </div>
+  <div class="about-text">
+        <span>Traffic Racer</span> <br>
+        <span style="color: #777777;">56mb</span>
+  </div>
+  </a>
+</div>
+
+
+
+
+
+
+<div class="app">
+ <a href="">
+   <div class="logo">
+     <img width="70px" src="images/angela.jpg" alt="">
+   </div>
+   <div class="about-text">
+        <span>Talking Angela</span> <br>
+        <span style="color: #777777;">67mb</span>
+   </div>
+ </a>
+</div>
+
+<div class="app">
+<a href="">
+ <div class="logo">
+   <img width="70px" src="images/boss.jpg" alt="">
+ </div>
+ <div class="about-text">
+      <span>New Boss 2</span> <br>
+      <span style="color: #777777;">26mb</span>
+ </div>
+</a>
+</div>
+     </div>
+       </section>
+
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        Many Download:
+      </h4>
+     <div class="apps">
+       <div class="app">
+         <a href="">
+           <div class="logo">
+             <img width="70px" src="images/ben.jpg" alt="" style="border-radius: 10px;">
+           </div>
+          <div class="about-text">
+                <span>Ben </span> <br>
+                <span style="color: #777777;">76mb</span>
+          </div>
+         </a>
+       </div>
+
+
+
+
+       <div class="app">
+        <a href="">
+         <div class="logo">
+           <img width="70px" src="images/surfers.jpg" alt="">
+         </div>
+        <div class="about-text">
+              <span>SubwaySub</span> <br>
+              <span style="color: #777777;">25mb</span>
+        </div>
+        </a>
+      </div>
+
+      <div class="app">
+     <a href="">
+       <div class="logo">
+         <img width="70px" src="images/forza.png" alt="">
+       </div>
+      <div class="about-text">
+            <span>F horizon </span> <br>
+            <span style="color: #777777;">87mb</span>
+      </div>
+     </a>
+    </div>
+
+
+    <div class="app">
+     <a href="">
+       <div class="logo">
+         <img width="70px" src="images/hay day.png" alt="">
+       </div>
+      <div class="about-text">
+            <span>Hay Day</span> <br>
+            <span style="color: #777777;">34mb</span>
+      </div>
+     </a>
+  </div>
+
+
+  <div class="app">
+  <a href="">
+   <div class="logo">
+     <img width="70px" src="images/clash.png" alt="">
+   </div>
+  <div class="about-text">
+        <span>Clash Royale</span> <br>
+        <span style="color: #777777;">97mb</span>
+  </div>
+  </a>
+</div>
+
+
+
+
+
+
+<div class="app">
+ <a href="">
+   <div class="logo">
+     <img width="70px" src="images/hank.png" alt="">
+   </div>
+   <div class="about-text">
+        <span>Hank</span> <br>
+        <span style="color: #777777;">89mb</span>
+   </div>
+ </a>
+</div>
+
+<div class="app">
+<a href="">
+ <div class="logo">
+   <img width="70px" src="images/hill climb.png" alt="">
+ </div>
+ <div class="about-text">
+      <span>Hill Climb</span> <br>
+      <span style="color: #777777;">26mb</span>
+ </div>
+</a>
+</div>
+     </div>
+    </section>
+
+
+    <section class="likes">
+       <div class="answer">
+          <p>Do you Like Pk Xd?</p>
+       </div>
+         <div class="app">
+            <img src="images/pk xd icon.jpg" alt="">
+         </div>
+         <div class="like">
+            <i class="fas fa-thumbs-up" id="like" onclick="Like()" style="cursor: pointer;"></i>
+            <i class="fas fa-thumbs-down" id="dislike" onclick="Dislike()"  style="cursor: pointer;"></i>
+         </div>
+         <div class="num">
+             <p id="likes">3ml+ Like</p>
+             <p id="dislikes">5hn+ DisLike</p>
+         </div>
+    </section>
+
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        Many Likes:
+      </h4>
+     <div class="apps">
+       <div class="app">
+         <a href="">
+           <div class="logo">
+             <img width="70px" src="images/red ball.png" alt="" style="border-radius: 10px;">
+           </div>
+          <div class="about-text">
+                <span>Red Ball 4</span> <br>
+                <span style="color: #777777;">90mb</span>
+          </div>
+         </a>
+       </div>
+
+
+
+
+       <div class="app">
+        <a href="">
+         <div class="logo">
+           <img width="70px" src="images/clash of.png" alt="">
+         </div>
+        <div class="about-text">
+              <span>Clash Of Clans</span> <br>
+              <span style="color: #777777;">23mb</span>
+        </div>
+        </a>
+      </div>
+
+      <div class="app">
+     <a href="">
+       <div class="logo">
+         <img width="70px" src="images/chees.webp" alt="">
+       </div>
+      <div class="about-text">
+            <span>Chess Game</span> <br>
+            <span style="color: #777777;">14mb</span>
+      </div>
+     </a>
+    </div>
+
+
+    <div class="app">
+     <a href="">
+       <div class="logo">
+         <img width="70px" src="images/fish.png" alt="">
+       </div>
+      <div class="about-text">
+            <span>FishDom Game </span> <br>
+            <span style="color: #777777;">22mb</span>
+      </div>
+     </a>
+  </div>
+
+
+  <div class="app">
+  <a href="">
+   <div class="logo">
+     <img width="70px" src="images/sniper.jpg" alt="">
+   </div>
+  <div class="about-text">
+        <span>Sniper 3d</span> <br>
+        <span style="color: #777777;">344mb</span>
+  </div>
+  </a>
+</div>
+
+
+
+
+
+
+<div class="app">
+ <a href="">
+   <div class="logo">
+     <img width="70px" src="images/car racing.png" alt="">
+   </div>
+   <div class="about-text">
+        <span>Car Racing</span> <br>
+        <span style="color: #777777;">95mb</span>
+   </div>
+ </a>
+</div>
+
+<div class="app">
+<a href="">
+ <div class="logo">
+   <img width="70px" src="images/multiplayer.png" alt="">
+ </div>
+ <div class="about-text">
+      <span>Multip Car</span> <br>
+      <span style="color: #777777;">46mb</span>
+ </div>
+</a>
+</div>
+     </div>
+    </section>
+
+
+    <section class="more-apps">
+      <h4 style="margin-left: 20px;">
+        Recommend:
+      </h4>
+     <div class="apps">
+       <div class="app">
+         <a href="">
+           <div class="logo">
+             <img width="70px" src="images/asphalt.png" alt="" style="border-radius: 10px;">
+           </div>
+          <div class="about-text">
+                <span>Asphalt 9</span> <br>
+                <span style="color: #777777;">344mb</span>
+          </div>
+         </a>
+       </div>
+
+
+
+
+       <div class="app">
+        <a href="">
+         <div class="logo">
+           <img width="70px" src="images/street.png" alt="">
+         </div>
+        <div class="about-text">
+              <span>F street</span> <br>
+              <span style="color: #777777;">23mb</span>
+        </div>
+        </a>
+      </div>
+
+      <div class="app">
+     <a href="">
+       <div class="logo">
+         <img width="70px" src="images/call.jpg" alt="">
+       </div>
+      <div class="about-text">
+            <span>C of Duty</span> <br>
+            <span style="color: #777777;">1,7gb</span>
+      </div>
+     </a>
+    </div>
+
+
+    <div class="app">
+     <a href="">
+       <div class="logo">
+         <img width="70px" src="images/kiyamet.jpg" alt="">
+       </div>
+      <div class="about-text">
+            <span>Kiyamet</span> <br>
+            <span style="color: #777777;">1,1gb</span>
+      </div>
+     </a>
+  </div>
+
+
+  <div class="app">
+  <a href="">
+   <div class="logo">
+     <img width="70px" src="images/vegas.png" alt="">
+   </div>
+  <div class="about-text">
+        <span>C Vegas</span> <br>
+        <span style="color: #777777;">34mb</span>
+  </div>
+  </a>
+</div>
+
+
+
+
+
+
+<div class="app">
+ <a href="">
+   <div class="logo">
+     <img width="70px" src="images/car racing.png" alt="">
+   </div>
+   <div class="about-text">
+        <span>Car Racing</span> <br>
+        <span style="color: #777777;">95mb</span>
+   </div>
+ </a>
+</div>
+
+<div class="app">
+<a href="">
+ <div class="logo">
+   <img width="70px" src="images/multiplayer.png" alt="">
+ </div>
+ <div class="about-text">
+      <span>Multip Car</span> <br>
+      <span style="color: #777777;">46mb</span>
+ </div>
+</a>
+</div>
+     </div>
+    </section>
+  
+
+</main>
+
+
+<script>function audioManager(){document.getElementById("saudio").play()}</script>
+<script>function Like(){ document.getElementById("like").style.color="blue"; if(document.getElementById("dislike").style.color="red"){   document.getElementById("dislike").style.color="black"; }}function Dislike(){ document.getElementById("dislike").style.color="red";if(document.getElementById("like").style.color="blue"){   document.getElementById("like").style.color="black"; }}</script>
+<script>function w3_open() {  document.getElementById("mySidebar").style.display = "block";  document.getElementById("myOverlay").style.display = "block";} function w3_close() {  document.getElementById("mySidebar").style.display = "none";  document.getElementById("myOverlay").style.display = "none";}</script>
+<script>function Settings() {    let windows = window.open("setting.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=400,width=500,height=400");myWindow.document.write();}</script>
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>

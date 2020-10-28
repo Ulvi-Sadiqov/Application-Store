@@ -1,0 +1,40 @@
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .account ul li {
+  margin: 20px 0px;
+  background-color: #cacaca;
+  list-style-type: none;
+  width: 600px;
+}
+
+body main .account ul li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 5px;
+}
+
+body main .account ul li div img {
+  width: 50px;
+  border-radius: 40px;
+}
+
+body main .account ul li div .switch input {
+  width: 50px;
+}
+/*# sourceMappingURL=account.css.map */

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - App Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/facebook.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/9bc3dcb3e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <h3 onclick="w3_open()" style="cursor: pointer;margin-left: 20px;">☰</h3>
+    
+    
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="link" href="#">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="link" href="account.html" >My Account</a>
+          </li>
+          <li class="nav-item active">
+            <a class="link" href="dom.html" >Sign out</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Install
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Application</a>
+              <a class="dropdown-item" href="game.html">Games</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Picture</a>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <a class="link " href="#" tabindex="-1" onclick="Settings()" aria-disabled="true">Settings</a>
+          </li>
+        </ul>
+        <form class="form-inline " style="margin-right: 20px;">
+          <input class="form-control mr-sm-2" type="search"  placeholder="Search">
+        </form>
+    </nav>
+   </header>
+
+
+  <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:3" id="mySidebar">
+    <div class="ac" style="padding:20px 0px;display:flex;align-items:center;background-color: aqua;">
+       <img src="https://lh3.googleusercontent.com/a-/AOh14Ghhe8ocPegfeb6voojcmTcoESJ1M6BBQGB62bXf=s88-c-k-c0x00ffffff-no-rj-mo"  width="50px" alt="" style="border-radius: 100px;">
+       <span style="font-size:15px ;" id="name">Ulvi Sadigov</span>
+    </div>
+     <div class="menu">
+
+      <div class="list">
+        <div class="icon">
+          <i class="fas fa-times" style="font-size:20px ;"></i>
+        </div>
+        <div class="text">
+              <h5 onclick="w3_close()" style="cursor: pointer;">Close Menu</h5>
+        </div>
+      </div>
+      <div class="hr">
+
+      </div>
+         <div class="list">
+           <div class="icon">
+            <a href=""><i class="fas fa-home" style="font-size: 20px;"></i></a>
+           </div>
+           <div class="text">
+                <a href="index.html"><h5 onclick="w3_close()">Home</h5></a>
+           </div>
+         </div>
+         <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-download" style="font-size: 20px;"></i></a>
+          </div>
+          <div class="text">
+               <a href=""><h5>Download</h5></a>
+          </div>
+        </div>
+
+        <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-sd-card"></i></a>
+          </div>
+          <div class="text">
+               <a href=""><h5>Memory</h5></a>
+          </div>
+        </div>
+
+        <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-cog"  style="font-size: 20px"></i></a>
+          </div>
+          <div class="text">
+             <a href=""> <h5>Settings</h5></a> 
+          </div>
+        </div>
+
+        <div class="hr">
+
+        </div>
+        <div class="hr">
+
+        </div>
+
+        <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-th-large"></i></a>
+          </div>
+          <div class="text">
+             <a href=""> <h5>Apps</h5></a> 
+          </div>
+        </div>
+
+        <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-dice-five"></i></a>
+          </div>
+          <div class="text">
+             <a href="game.html"> <h5>Games</h5></a> 
+          </div>
+        </div>
+     </div>
+    </ul>
+  </nav>
+  <div class="w3-overlay w3-hide-large " onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+
+   <section class="bottom-menu">
+     <div class="icon">
+      <a href=""><i class="fas fa-home" style="color: blue;"></i></a>
+      <a href="game.html"><i class="fas fa-dice-five"></i></a>
+      <a href=""><i class="fas fa-th-large"></i></a>
+     </div>
+
+   </section>
+
+
+   <main style="margin-top: 50px;">
+      <section class="app" style="background-color: white;">
+        <div class="boxs">
+          <div class="box">
+            <div class="row">
+              <div class="img">
+                  <img src="images/facebook.png" style="border-radius: 15px;margin-right: 10px;" width="80px" alt="">
+              </div>
+              <div class="about">
+                   <h1>Facebook</h1>
+                   <a href="" style="color: green;text-decoration: none;font-weight: 500;">Facebook</a>
+              </div>
+        
+               
+          </div>
+  
+  
+  
+          <div class="row row2">
+              <div class="dw justify-content-right">
+                  <a href="" class="dwn">Install</a>
+              </div>
+          </div>
+          </div>
+          <div class="about2">
+              <span class="mb">
+                 42mb
+              </span>
+              <span class="wi">Wifi</span>
+              <span class="b">
+                 5mln
+              </span>
+          </div>
+        </div>
+       
+
+        <div class="row3">
+            <img src="https://lh3.googleusercontent.com/JelCBr0rDjDEGOqYb4m2Z7OSVBxS5KyqO94eW5TGnQtHc9k08uaMZVTz6s_rKha31eE=w720-h310-rw" alt="">
+            <img src="https://lh3.googleusercontent.com/Iomoub5EHkAk1_bKqIyjkFbKQ4vw-zFfTqfUMG_da-4-hV_tXwvuiFQUQWIeol_fRSo=w720-h310-rw" alt="">
+            <img src="https://lh3.googleusercontent.com/Jx0nPnGaGNRXCHlmGv13gDsIzhLykgkza5y2SUNruZoiwcik5lQ-gj99vdHZA0Zlbtrz=w720-h310-rw" alt="">
+            <img src="https://lh3.googleusercontent.com/YBTVMqZcl-t16dnH7_DxHsMm7WU2v2HdZRX3Q3UnYHXo8HUfQSuN2Ahn_M4KQunbeigu=w720-h310-rw" alt="">
+            <img src="https://lh3.googleusercontent.com/o4enSNrWkR4F6wILxPk6-6XkNyea4j9tcn8gLPphbBvhpp4_HBU9NNuQnhzreYH5uSN0=w720-h310-rw" alt="">
+        </div>
+      </section>
+
+
+      <section class="programs">
+        <h4 style="margin-left: 20px;">Famous Application:</h4>
+         <div class="apps" id="apps">
+           <div class="app">
+            <a href="#">
+             <div class="logo">
+               <img width="70px" src="images/instagram.jpg" alt="">
+             </div>
+            <div class="about-text">
+                  <span>Instagram</span> <br>
+                  <span style="color: #777777;">32mb</span>
+            </div>
+            </a>
+           </div>
+ 
+ 
+ 
+ 
+   
+ 
+          <div class="app">
+          <a href="snapchat.html">
+           <div class="logo">
+             <img width="70px" src="images/snapchat.png" alt="">
+           </div>
+          <div class="about-text">
+                <span>Snapchat</span> <br>
+                <span style="color: #777777;">60mb</span>
+          </div>
+          </a>
+        </div>
+ 
+ 
+        <div class="app">
+       <a href="pinterest.html">
+         <div class="logo">
+           <img width="70px" src="images/pinterest.jpg" alt="">
+         </div>
+        <div class="about-text">
+              <span>Pinterest</span> <br>
+              <span style="color: #777777;">18mb</span>
+        </div>
+       </a>
+      </div>
+ 
+ 
+      <div class="app">
+       <a href="youtube.html">
+         <div class="logo">
+           <img width="70px" src="images/youtube.png" alt="">
+         </div>
+        <div class="about-text">
+              <span>Youtube</span> <br>
+              <span style="color: #777777;">455mb</span>
+        </div>
+       </a>
+    </div>
+ 
+ 
+ 
+    <div class="app">
+    <a href="">
+     <div class="logo">
+       <img width="70px" src="images/neftlix.png" alt="">
+     </div>
+    <div class="about-text">
+          <span>Neftlix</span> <br>
+          <span style="color: #777777;">20mb</span>
+    </div>
+    </a>
+  </div>
+ 
+ 
+  <div class="app">
+   <a href="">
+     <div class="logo">
+       <img width="70px" src="images/tik tok.png" alt="">
+     </div>
+    <div class="about-text">
+          <span>Tik Tok</span> <br>
+          <span style="color: #777777;">39mb</span>
+    </div>
+   </a>
+ </div>
+ 
+ <div class="app">
+   <a href="">
+     <div class="logo">
+       <img width="70px" src="images/chrome.png" alt="">
+     </div>
+    <div class="about-text">
+          <span>Chrome</span> <br>
+          <span style="color: #777777;">78mb</span>
+    </div>
+   </a>
+ </div>
+         </div>
+      </section>
+
+      <section class="programs">
+        <h4 style="margin-left: 20px;">More Application:</h4>
+         <div class="apps" id="apps">
+           <div class="app">
+            <a href="#">
+             <div class="logo">
+               <img width="70px" src="images/snaptube.jpg" alt="">
+             </div>
+            <div class="about-text">
+                  <span>Snaptube</span> <br>
+                  <span style="color: #777777;">28mb</span>
+            </div>
+            </a>
+           </div>
+ 
+ 
+ 
+ 
+   
+ 
+          <div class="app">
+          <a href="snapchat.html">
+           <div class="logo">
+             <img width="70px" src="images/lite.jpg" alt="">
+           </div>
+          <div class="about-text">
+                <span>FC Lite</span> <br>
+                <span style="color: #777777;">1,6mb</span>
+          </div>
+          </a>
+        </div>
+ 
+ 
+        <div class="app">
+       <a href="pinterest.html">
+         <div class="logo">
+           <img width="70px" src="images/Brawk.png" alt="">
+         </div>
+        <div class="about-text">
+              <span>Brawl Stars</span> <br>
+              <span style="color: #777777;">140mb</span>
+        </div>
+       </a>
+      </div>
+ 
+ 
+      <div class="app">
+       <a href="youtube.html">
+         <div class="logo">
+           <img width="70px" src="images/canva.png" alt="">
+         </div>
+        <div class="about-text">
+              <span>Canva</span> <br>
+              <span style="color: #777777;">56mb</span>
+        </div>
+       </a>
+    </div>
+ 
+ 
+ 
+    <div class="app">
+    <a href="">
+     <div class="logo">
+       <img width="70px" src="images/clash.png" alt="">
+     </div>
+    <div class="about-text">
+          <span>Clash Of Royale
+          </span> <br>
+          <span style="color: #777777;">123mb</span>
+    </div>
+    </a>
+  </div>
+ 
+ 
+  <div class="app">
+   <a href="">
+     <div class="logo">
+       <img width="70px" src="images/opera gx.jpg" alt="">
+     </div>
+    <div class="about-text">
+          <span>Opera GX</span> <br>
+          <span style="color: #777777;">54mb</span>
+    </div>
+   </a>
+ </div>
+ 
+ <div class="app">
+   <a href="">
+     <div class="logo">
+       <img width="70px" src="images/Skype logog.png" alt="">
+     </div>
+    <div class="about-text">
+          <span>Skype</span> <br>
+          <span style="color: #777777;">45mb</span>
+    </div>
+   </a>
+ </div>
+         </div>
+      </section>
+      <section class="about-app">
+           <ol>
+              <li>
+                 <span>
+                      Download:
+                 </span>
+                 <strong>
+                     5.000.000.000+
+                 </strong>
+              </li>
+              <li>
+                <span>
+                    Size:
+                </span>
+                <strong>
+                      41,82MB
+                </strong>
+              </li>
+              <li>
+                <span>
+                    Company:
+                </span>
+                <strong>
+                      Facebook
+                </strong>
+              </li>
+              <li>
+                <span>
+                    Version:
+                </span>
+                <strong>
+                      272.0.0.50.125
+                </strong>
+              </li>
+              <li>
+                <span>
+                    Last Update:
+                </span>
+                <strong>
+                      26 May 2020
+                </strong>
+              </li>
+              <li>
+                <span>
+                    Age:
+                </span>
+                <strong>
+                      12+
+                </strong>
+              </li>
+              <li>
+                <span>
+                    Ads:
+                </span>
+                <strong>
+                      Yes
+                </strong>
+              </li>
+           </ol>
+      </section>
+
+     
+
+      <section class="more">
+            <ol>
+              <li>
+                <a href="https://apps.apple.com/us/app/facebook/id284882215">Download With App Store</a>
+              </li>
+                 <li>
+                     <a href="https://play.google.com/store/apps/details?id=com.facebook.katana&hl=en">Download By Play Store</a>
+                 </li>
+                 <li>
+                  <a href="https://facebook.com">Online</a>
+              </li>
+            </ol>
+      </section>
+   </main>
+
+
+
+<script>  function w3_open() {  document.getElementById("mySidebar").style.display = "block";  document.getElementById("myOverlay").style.display = "block";} function w3_close() {  document.getElementById("mySidebar").style.display = "none";  document.getElementById("myOverlay").style.display = "none";}</script>
+<script>  function Settings() {    let windows = window.open("setting.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=400,width=500,height=400");myWindow.document.write();}</script>
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

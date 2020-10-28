@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/9bc3dcb3e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <h3 onclick="w3_open()" style="cursor: pointer;margin-left: 20px;">☰</h3>
+    
+    
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="link" href="#">My Account</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Install
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Application</a>
+              <a class="dropdown-item" href="game.html">Games</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Picture</a>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <a class="link " href="#" tabindex="-1" onclick="Settings()" aria-disabled="true">Settings</a>
+          </li>
+        </ul>
+        <form class="form-inline " style="margin-right: 20px;">
+          <input class="form-control mr-sm-2" type="search"  placeholder="Search">
+        </form>
+    </nav>
+   </header>
+
+   <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:3" id="mySidebar">
+    <div class="ac" style="padding:20px 0px;display:flex;align-items:center;background-color: aqua;">
+       <img src="https://lh3.googleusercontent.com/a-/AOh14Ghhe8ocPegfeb6voojcmTcoESJ1M6BBQGB62bXf=s88-c-k-c0x00ffffff-no-rj-mo"  width="50px" alt="" style="border-radius: 100px;">
+       <span style="font-size:15px ;">Ulvi Sadigov</span>
+    </div>
+     <div class="menu">
+
+      <div class="list">
+        <div class="icon">
+          <i class="fas fa-times" style="font-size:20px ;"></i>
+        </div>
+        <div class="text">
+              <h5 onclick="w3_close()" style="cursor: pointer;">Close Menu</h5>
+        </div>
+      </div>
+      <div class="hr">
+
+      </div>
+         <div class="list">
+           <div class="icon">
+            <a href=""><i class="fas fa-home" style="font-size: 20px;"></i></a>
+           </div>
+           <div class="text">
+                <a href="#"><h5 onclick="w3_close()">Home</h5></a>
+           </div>
+         </div>
+         <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-download" style="font-size: 20px;"></i></a>
+          </div>
+          <div class="text">
+               <a href=""><h5>Download</h5></a>
+          </div>
+        </div>
+
+        <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-sd-card"></i></a>
+          </div>
+          <div class="text">
+               <a href=""><h5>Memory</h5></a>
+          </div>
+        </div>
+
+        <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-cog"  style="font-size: 20px"></i></a>
+          </div>
+          <div class="text">
+             <a href=""> <h5>Settings</h5></a> 
+          </div>
+        </div>
+
+        <div class="hr">
+
+        </div>
+        <div class="hr">
+
+        </div>
+
+        <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-th-large"></i></a>
+          </div>
+          <div class="text">
+             <a href=""> <h5>Apps</h5></a> 
+          </div>
+        </div>
+
+        <div class="list">
+          <div class="icon">
+            <a href=""><i class="fas fa-dice-five"></i></a>
+          </div>
+          <div class="text">
+             <a href="game.html"> <h5>Games</h5></a> 
+          </div>
+        </div>
+     </div>
+    </ul>
+  </nav>
+
+  <section class="bottom-menu">
+    <div class="icon">
+     <a href=""><i class="fas fa-home" style="color: blue;"></i></a>
+     <a href="game.html"><i class="fas fa-dice-five"></i></a>
+     <a href=""><i class="fas fa-th-large"></i></a>
+    </div>
+
+  </section>
+
+
+  <main>
+      <section class="account">
+            <ul>
+                <li>
+                    <div>
+                        <img src="https://lh3.googleusercontent.com/a-/AOh14Ghhe8ocPegfeb6voojcmTcoESJ1M6BBQGB62bXf=s88-c-k-c0x00ffffff-no-rj-mo" alt="">
+                        <span>Ulvi Sadiqov</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                         <span>Email:</span>
+                         <span id="mail">ulvisadigov@gmail.com</span>
+                    </div>
+                </li>
+                <li>
+                    <div> 
+                          <span>Country:</span>
+                          <form action="">
+                              <select name="" id="">
+                                  <option value="">Azerbaijan</option>
+                                  <option value="">Arabia</option>
+                                  <option value="">Ukranie</option>
+                                  <option value="">United Kingdom</option>
+                                  <option value="">United States</option>
+                                  <option value="">Russio</option>
+                                  <option value="">Greece</option>
+                                  <option value="">Turkey</option>
+                                  <option value="">New Zellandi</option>
+                                  <option value="">Canada</option>
+                                  <option value="">Nigeria</option>
+                                  <option value="">Niger</option>
+                                  <option value="">China</option>
+                                  <option value="">Italy</option>
+                                  <option value="">Germany</option>
+                                  <option value="">Spany</option>
+                                  <option value="">India</option>
+                                  <option value="">Tailand</option>
+                                  <option value="">France</option>
+
+                              </select>
+                          </form>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                          <span>City</span>
+                          <select name="" id="">
+                            <option value="">Agcabedi</option>
+                            <option value="">Agdam</option>
+                            <option value="">Baku</option>
+                            <option value="">Babek</option>
+                            <option value="">Berde</option>
+                            <option value="">Culfa</option>
+                            <option value="">Xankendi</option>
+                            <option value="">Xocali</option>
+                            <option value="">Lankaran</option>
+                            <option value="">Astara</option>
+                            <option value="">Salyan</option>
+                            <option value="" selected>Quba</option>
+                            <option value="">Qusar</option>
+                            <option value="">Qebele</option>
+                            <option value="">Sumqayit</option>
+                            <option value="">Xizi</option>
+                            <option value="">Samaxi</option>
+                            <option value="">Gence</option>
+                            <option value="">Siyezen</option>
+
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>Message</span>
+                            <input type="checkbox" checked="" >
+                    </div>
+                </li>
+            </ul>
+      </section>
+  </main>
+  <script>
+    let object =JSON.parse(sessionStorage["user"])
+    document.getElementById("mail").innerText= object.name;
+</script>
+<script>  function Settings() {    let windows = window.open("setting.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=400,width=500,height=400");myWindow.document.write();}</script>
+  
+<script>  function w3_open() {  document.getElementById("mySidebar").style.display = "block";  document.getElementById("myOverlay").style.display = "block";} function w3_close() {  document.getElementById("mySidebar").style.display = "none";  document.getElementById("myOverlay").style.display = "none";}</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
